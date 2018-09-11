@@ -1,0 +1,1 @@
+java -cp .;absys.jar;ojdbc7.jar;mail.jar EmplistBatch > runlist.log

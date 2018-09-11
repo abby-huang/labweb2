@@ -1,0 +1,1 @@
+java -cp .;absys.jar;servlet-api.jar;ojdbc7.jar;mail.jar OLaborBatch > runOLabor.log

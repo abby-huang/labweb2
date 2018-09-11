@@ -1,0 +1,46 @@
+/* ######### Matt Black Strip Main Menu Bar CSS ######### */
+
+.mattskymenu ul{
+    margin: 0;
+    padding: 0;
+    padding-left:15px;
+    font: 12px Verdana;
+    list-style-type: none;
+    border-bottom: 1px solid gray;
+    background: #D8E8FF;
+    height: 2.0em;
+    /*width: 100%;*/
+    overflow: hidden;
+}
+.mattskymenu li{
+    display: inline;
+    margin: 0;
+}
+.mattskymenu li a{
+    float: left;
+    display: block;
+    text-decoration: none;
+    margin: 0;
+    padding: 8px 10px 4px; /*padding inside each tab*/
+    border-right: 1px solid white; /*right divider between tabs*/
+    color: #000;
+    background: #D8E8FF;
+    height:1.0em;
+    line-height:1.0em;
+}
+.mattskymenu li a:visited{
+    color: #000;
+}
+.mattskymenu li a:hover{
+    height:0.8em;
+    line-height:0.8em;
+    border: 1px solid #40A0FF;
+    background: #C0E0FF; /*background of tabs for hover state */
+}
+.mattskymenu a.selected{
+    height:0.8em;
+    line-height:0.8em;
+    border: 1px solid #40A0FF;
+    background: #C0E0FF; /*background of tab with "selected" class assigned to its LI */
+}
+

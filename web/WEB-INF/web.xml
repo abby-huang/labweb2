@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee          http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <description>全國外勞動態查詢系統</description>
+    <display-name>全國外勞動態查詢系統</display-name>
+    <welcome-file-list>
+        <welcome-file>Login.jsp</welcome-file>
+    </welcome-file-list>
+    <session-config>
+        <session-timeout>90</session-timeout>
+    </session-config>
+
+<!--
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.html</location>
+    </error-page>
+-->
+
+    <!-- XSS -->
+<!--
+    <filter>
+        <filter-name>XSSFilter</filter-name>
+        <filter-class>com.absys.filter.XSSFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>XSSFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+-->
+
+    <!-- XFS & XSS -->
+    <filter>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>httpHeaderSecurity</filter-name>
+        <filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
+        <init-param>
+            <param-name>antiClickJackingOption</param-name>
+            <param-value>SAMEORIGIN</param-value>
+        </init-param>
+        <init-param>
+            <param-name>xssProtectionEnabled</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>httpHeaderSecurity</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- REST -->
+    <servlet>
+        <servlet-name>RestForward</servlet-name>
+        <servlet-class>common.RestForward</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RestForward</servlet-name>
+        <url-pattern>/REST/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- 認證碼 -->
+    <servlet>
+        <servlet-name>AbsysCaptcha</servlet-name>
+        <servlet-class>com.absys.util.AbsysCaptchaServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AbsysCaptcha</servlet-name>
+        <url-pattern>/AbsysCaptcha.png</url-pattern>
+    </servlet-mapping>
+
+    <!-- 查察系統 -->
+    <servlet>
+        <servlet-name>SurveyExcel</servlet-name>
+        <servlet-class>survey.SurveyExcel</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SurveyExcel</servlet-name>
+        <url-pattern>/labsurvey/SurveyExcel</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>WorkerExcel</servlet-name>
+        <servlet-class>survey.WorkerExcel</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WorkerExcel</servlet-name>
+        <url-pattern>/labsurvey/WorkerExcel</url-pattern>
+    </servlet-mapping>
+
+    <!-- 檔案下載 -->
+    <servlet>
+        <servlet-name>DownFile</servlet-name>
+        <servlet-class>DownFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DownFile</servlet-name>
+        <url-pattern>/servlet/DownFile</url-pattern>
+    </servlet-mapping>
+
+    <!-- 清冊下載 -->
+    <servlet>
+        <servlet-name>QryLaborDataText</servlet-name>
+        <servlet-class>QryLaborDataText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryLaborWkaddrText</servlet-name>
+        <servlet-class>QryLaborWkaddrText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryLaborStatusText</servlet-name>
+        <servlet-class>QryLaborStatusText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryLaborEscapeText</servlet-name>
+        <servlet-class>QryLaborEscapeText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpIllegalText</servlet-name>
+        <servlet-class>QryEmpIllegalText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpNameText</servlet-name>
+        <servlet-class>QryEmpNameText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpKindText</servlet-name>
+        <servlet-class>QryEmpKindText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpListText</servlet-name>
+        <servlet-class>QryEmpListText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpListText2</servlet-name>
+        <servlet-class>QryEmpListText2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpListTextComm</servlet-name>
+        <servlet-class>QryEmpListTextComm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpListAllText</servlet-name>
+        <servlet-class>QryEmpListAllText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpListAllText2</servlet-name>
+        <servlet-class>QryEmpListAllText2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpListAllTextComm</servlet-name>
+        <servlet-class>QryEmpListAllTextComm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpBizDownText</servlet-name>
+        <servlet-class>QryEmpBizDownText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryEmpLaborDownText</servlet-name>
+        <servlet-class>QryEmpLaborDownText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryWfempListText</servlet-name>
+        <servlet-class>QryWfempListText</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QryWfempListAllText</servlet-name>
+        <servlet-class>QryWfempListAllText</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QryLaborDataText</servlet-name>
+        <url-pattern>/servlet/QryLaborDataText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryLaborWkaddrText</servlet-name>
+        <url-pattern>/servlet/QryLaborWkaddrText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryLaborStatusText</servlet-name>
+        <url-pattern>/servlet/QryLaborStatusText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryLaborEscapeText</servlet-name>
+        <url-pattern>/servlet/QryLaborEscapeText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpIllegalText</servlet-name>
+        <url-pattern>/servlet/QryEmpIllegalText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpNameText</servlet-name>
+        <url-pattern>/servlet/QryEmpNameText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpKindText</servlet-name>
+        <url-pattern>/servlet/QryEmpKindText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpListText</servlet-name>
+        <url-pattern>/servlet/QryEmpListText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpListText2</servlet-name>
+        <url-pattern>/servlet/QryEmpListText2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpListTextComm</servlet-name>
+        <url-pattern>/servlet/QryEmpListTextComm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpListAllText</servlet-name>
+        <url-pattern>/servlet/QryEmpListAllText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpListAllText2</servlet-name>
+        <url-pattern>/servlet/QryEmpListAllText2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpListAllTextComm</servlet-name>
+        <url-pattern>/servlet/QryEmpListAllTextComm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpBizDownText</servlet-name>
+        <url-pattern>/servlet/QryEmpBizDownText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryEmpLaborDownText</servlet-name>
+        <url-pattern>/servlet/QryEmpLaborDownText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryWfempListText</servlet-name>
+        <url-pattern>/servlet/QryWfempListText</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QryWfempListAllText</servlet-name>
+        <url-pattern>/servlet/QryWfempListAllText</url-pattern>
+    </servlet-mapping>
+
+    <!-- XDocReport servlet -->
+    <servlet>
+        <servlet-name>MainReportServlet</servlet-name>
+        <servlet-class>report.dispatcher.MainReportServlet</servlet-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainReportServlet</servlet-name>
+        <url-pattern>/reportServlet/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- XDocReport dispatcher -->
+    <servlet>
+        <servlet-name>DispatcherReportServlet</servlet-name>
+        <servlet-class>fr.opensagres.xdocreport.document.web.dispatcher.ProcessDispatcherXDocReportServlet</servlet-class>
+        <init-param>
+            <param-name>dispatchers</param-name>
+            <param-value>report.dispatcher.MainDispatcher</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DispatcherReportServlet</servlet-name>
+        <url-pattern>/reportDispatcher/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Apache CXF -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/cxf.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>CXFServlet</servlet-name>
+        <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CXFServlet</servlet-name>
+        <url-pattern>/services/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>

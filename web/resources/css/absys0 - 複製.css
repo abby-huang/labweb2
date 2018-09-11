@@ -1,0 +1,131 @@
+.ab-body    {background-color:#CDE1F6;}     /*所有系統背景顏色*/
+.ab-work    {background-color:#E0ECF6;}     /*工作區域背景顏色*/
+.ab-menu    {background-color:#265C93;}     /*選單底色*/
+
+.ab-m00     {font-size:13px; font-family:"細明體",sans-serif; color:#333366;}  /*系統使用主要小字型*/
+.ab-m01     {font-size:14px; font-family:"細明體",sans-serif; color:#333366;}  /*系統使用主要大字型*/
+.ab-m10     {font-size:13px; font-family:"細明體",sans-serif; color:#000000;}  /*小字型黑色*/
+.ab-m11     {font-size:16px; font-family:"細明體",sans-serif; color:#000000;}  /*大字型黑色*/
+.ab-m20     {font-size:13px; font-family:"細明體",sans-serif; color:#ffffff;}  /*小字型白色*/
+.ab-m21     {font-size:16px; font-family:"細明體",sans-serif; color:#ffffff;}  /*大字型白色*/
+.ab-m30     {font-size:13px; font-family:"細明體",sans-serif; color:#ff0000;}  /*小字型紅色*/
+.ab-m31     {font-size:16px; font-family:"細明體",sans-serif; color:#ff0000;}  /*大字型紅色*/
+.ab-m40     {font-size:13px; font-family:"細明體",sans-serif; color:#0000ff;}  /*小字型藍色*/
+.ab-m41     {font-size:16px; font-family:"細明體",sans-serif; color:#0000ff;}  /*大字型藍色*/
+.ab-m50     {font-size:13px; font-family:"細明體",sans-serif; color:#ffff00;}  /*小字型黃色*/
+.ab-m51     {font-size:16px; font-family:"細明體",sans-serif; color:#ffff00;}  /*大字型黃色*/
+.ab-p00     {font-size:16px; font-family:"標楷體",sans-serif; color:#000000;}  /*列印報表基本型黑色*/
+.ab-p01     {font-size:18px; font-family:"標楷體",sans-serif; color:#000000;}  /*列印報表大字型黑色*/
+
+
+form {margin : 0px;}    /*讓所有的 form 不會有空格*/
+.ab-box00   {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*table 沒有外框*/
+             border-width:0px; margin:0px; padding:0px;}
+.ab-box00 tr{border-width:0px; margin:0px; padding:0px;}
+.ab-box00 th{border-width:0px; margin:0px; padding:0px;}
+.ab-box00 td{border-width:0px; margin:0px; padding:0px; vertical-align:middle;}
+.ab-box01   {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*table 單線外框*/
+             background-color:#EDF5FF; border-collapse:collapse;
+             border:1px solid #99BBE8;}
+.ab-box01 td{border:1px solid #99BBE8; padding:2px 2px 2px 2px; vertical-align:middle;}
+.ab-box02   {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*table 雙線外框*/
+             background-color:#EDF5FF; border-collapse:collapse;
+             border:2px solid #99BBE8;}
+.ab-box02 td{border:1px solid #99BBE8; padding:2px 2px 2px 2px; vertical-align:middle;}
+.ab-box03   {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*table 雙線外框*/
+             background-color:#EDF5FF; border-collapse:collapse;
+             border:3px double #99BBE8;}
+.ab-box03 td{border:1px solid #99BBE8; padding:2px 2px 2px 2px; vertical-align:middle;}
+.ab-frmlbl  {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*form 輸入標題字型背景顏色*/
+             background-color:#E0ECF6; margin:0px 2px; padding:2px;
+             vertical-align: middle;}
+.ab-frmlb2  {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*form 輸入標題字型背景顏色：黃色(警示必填的欄位)*/
+             background-color:#ECEB7B; margin:0px 2px; padding:2px;
+             vertical-align: middle;}
+.ab-frmlb3  {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*form 輸入標題字型背景顏色：黃褐色(警示有條件的必填欄位)*/
+             background-color:#FFCC00; margin:0px 2px; padding:2px;
+             vertical-align: middle;}
+.ab-frmlb4  {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*form 輸入標題字型背景顏色：淺綠色(警示有填值時會勾稽的欄位)*/
+             background-color:#CCFFCC; margin:0px 2px; padding:2px;
+             vertical-align: middle;}
+.ab-title   {font-size:13px; font-family:"細明體",sans-serif; color:#333366;   /*form 輸入標題字型背景顏色*/
+             background-color:#D0D8E6; margin:0px 2px; padding:2px;
+             vertical-align: middle;}
+.ab-inp00   {height:13px; font-size:13px; font-family:"細明體",sans-serif;     /*小字型欄位輸入*/
+             margin:1px 1px; padding:2px; vertical-align:middle;
+             background:#fff url(../images/text-bg.gif) repeat-x 0 0;
+             border: 1px solid #858898;}
+.ab-inp01   {height:13px; font-size:13px; font-family:"細明體",sans-serif;     /*唯讀反白小字型欄位輸入*/
+             margin:1px 1px; padding:2px; vertical-align:middle;
+             background-color:#D0E4FA;
+             border: 1px solid #858898;}
+.ab-inp10   {height:22px; font-size:16px; font-family:"細明體",sans-serif;     /*大字型欄位輸入*/
+             margin:1px 1px; padding:2px; vertical-align:middle;
+             background:#fff url(../images/text-bg.gif) repeat-x 0 0;
+             border: 1px solid #858898;}
+.ab-sel00   {height:20px; font-size:12px; font-family:"細明體",sans-serif;     /*小字型下拉選項*/
+             margin:1px 1px; padding:2px; vertical-align:middle;
+             background:#fff url(../images/text-bg.gif) repeat-x 0 0; border: 1px solid #858898;}
+.ab-sel01   {height:20px; font-size:12px; font-family:"細明體",sans-serif;     /*小字型下拉選項*/
+             margin:1px 1px; padding:2px; vertical-align:middle;
+             background-color:#D0E4FA; border: 1px solid #858898;}
+.ab-btn00   {height:20px; font-size:12px; font-family:"細明體",sans-serif;     /*平板小按鈕*/
+             padding:0px; border:1px solid #669; overflow:hidden;
+             background:#C3DAF9; vertical-align:middle; cursor:pointer;}
+
+/*一般超連結*/
+.ab-a0:link     {font-size:13px; font-family:"細明體",sans-serif; color:#0066cc; text-decoration:none;}
+.ab-a0:visited  {font-size:13px; font-family:"細明體",sans-serif; color:#0066cc; text-decoration:none;}
+.ab-a0:hover    {font-size:13px; font-family:"細明體",sans-serif; color:#ff0000; text-decoration:none;}
+.ab-a0:active   {font-size:13px; font-family:"細明體",sans-serif; color:#0066cc; text-decoration:none;}
+
+/*反白超連結*/
+.ab-a1:link     {font-size:13px; font-family:"細明體",sans-serif; color:#ffffff; text-decoration:none;}
+.ab-a1:visited  {font-size:13px; font-family:"細明體",sans-serif; color:#ffffff; text-decoration:none;}
+.ab-a1:hover    {font-size:13px; font-family:"細明體",sans-serif; color:#ffff00; text-decoration:none;}
+.ab-a1:active   {font-size:13px; font-family:"細明體",sans-serif; color:#ffffff; text-decoration:none;}
+
+/*頁數選擇連結*/
+.ab-page        {font-size:13px; font-family:Verdana; color:#0066cc;}   /*正常字*/
+.ab-pagedim     {font-size:13px; font-family:Verdana; color:#AFAFAF;}   /*灰色字*/
+.ab-pageunsel   {font-size:13px; font-family:Verdana; font-weight:bold; color:#405060;} /*已經選擇的頁數*/
+.ab-a2:link     {font-size:13px; font-family:Verdana; color:#0066cc; text-decoration:none;}
+.ab-a2:visited  {font-size:13px; font-family:Verdana; color:#0066cc; text-decoration:none;}
+.ab-a2:hover    {font-size:13px; font-family:Verdana; color:#ff0000; text-decoration:none;}
+.ab-a2:active   {font-size:13px; font-family:Verdana; color:#0066cc; text-decoration:none;}
+
+/*Footer bard 狀態列*/
+.divFooter  {background: #265C93; border-top: 1px solid #083772;
+             margin:0px; padding:0px 0px; color:white; font:normal 8pt arial,helvetica;}
+
+/****** Ext 原本修改的 ******/
+/*Layout panel - 外框，背景*/
+.x-layout-panel {border:0px none; background-color:#CDE1F6;}
+.x-layout-nested-layout .x-layout-panel {border:0px none; background-color:#CDE1F6;}
+.x-panel-body {border:0px none; background-color:#CDE1F6;}
+/*模組標題 - Ext*/
+.x-layout-panel-hd-text{
+    font-size:17px;
+    font-family:標楷體;
+    color:#0060A0;
+    padding: 0px 0px 0px 10px;
+}
+.x-panel-header {
+    font-size:17px;
+    font-weight:normal;
+    font-family:標楷體;
+    color:#0060A0;
+    padding: 4px 0px 2px 10px;
+}
+/*
+.x-window-header {
+	background-color:navy;
+}
+.x-window-header-text {
+	color:#FFF;
+}
+.x-panel-header {
+	background-color:navy;
+}
+*/
+

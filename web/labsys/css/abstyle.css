@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+/*----------------*/
+/* CSS Document */
+body {
+    margin: 0px;
+    padding: 0 0 0px;
+    background: #FFFFFF;
+}
+
+/*一般超連結*/
+a         {color:#2e6e9e; text-decoration:none;}
+a:link    {color:#2e6e9e;}
+a:visited {color:#2e6e9e;}
+a:active  {color:#2e6e9e; text-decoration:none;}
+a:hover   {color:#ff0000; text-decoration:underline;}
+
+/*頁數選擇連結*/
+.ab-page        {font-size:13px; font-family:Verdana; color:#2e6e9e;}   /*正常字*/
+.ab-pagedim     {font-size:13px; font-family:Verdana; color:#AFAFAF;}   /*灰色字*/
+.ab-pageunsel   {font-size:13px; font-family:Verdana; font-weight:bold; color:#405060;} /*已經選擇的頁數*/
+.ab-a2:link     {color:#2e6e9e;}
+.ab-a2:visited  {color:#2e6e9e;}
+.ab-a2:hover    {font-size:13px; font-family:Verdana; color:#ff0000; text-decoration:none;}
+.ab-a2:active   {font-size:13px; font-family:Verdana; color:#2e6e9e; text-decoration:none;}
+
+
+/*字型*/
+.ab-font-black  {font-size: 13px; font-family: Lucida Grande,Lucida Sans,Arial,sans-serif; color: #000;}  /*小字型黑色*/
+.ab-font-red    {font-size: 13px; font-family: Lucida Grande,Lucida Sans,Arial,sans-serif; color: #ff0000;}  /*小字型紅色*/
+.ab-font-title  {font-size: 16px; font-family: 標楷體; color: #0060A0;}  /*標題大字*/
+
+
+/*表頭*/
+.toptitle {
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background: #fff url(../images/title-bg.jpg) repeat-x 0 0;
+}
+
+.textdata {
+    color: #000;
+    text-align: left;
+}
+
+
+/*table 單線外框*/
+.tablefrm, .tablefrm2, .tablefrm3 {
+    font-size:13px;
+    font-family:Lucida Grande,Lucida Sans,Arial;
+    color:#2e6e9e;
+    border:1px solid #a6c9e2;
+    border-collapse:seprate;
+    background-color:#fcfdfd;
+}
+.tablefrm tr, .tablefrm2 tr, .tablefrm3 tr {
+    height:22px;
+    margin:0px;
+    padding:0px;
+}
+.tablefrm th, .tablefrm2 th, .tablefrm3 th {
+    font-weight:normal;
+    vertical-align:middle;
+    height:22px;
+    padding:2px 8px;
+    border:1px solid #a6c9e2;
+    background: #ebf6ff;
+}
+.tablefrm td, .tablefrm2 td, .tablefrm3 td {
+    vertical-align:middle;
+    height:22px;
+    padding:2px;
+    border:1px solid #a6c9e2;
+}
+
+/*table 粗線外框*/
+.tablefrm2 {
+    border:2px solid #a6c9e2;
+}
+
+/*table 雙線外框*/
+.tablefrm3 {
+    border:3px double #a6c9e2;
+}
+
+/*table 沒有外框*/
+.tablefrm0 {
+    font-size:13px;
+    font-family:Lucida Grande,Lucida Sans,Arial;
+    color:#2e6e9e;
+    border:0px;
+    border-collapse:seprate;
+    background: #ebf6ff;
+}
+.tablefrm0 tr{
+    height:20px;
+    margin:0px;
+    padding:0px;
+}
+.tablefrm0 th{
+    font-weight:normal;
+    vertical-align:middle;
+    height:20px;
+    padding:2px 8px;
+    border:0px;
+}
+.tablefrm0 td{
+    vertical-align:middle;
+    height:20px;
+    padding:2px;
+    border:0px;
+}
+
+
+
+
+/*設定 disabled 字型顏色，IE 無法使用*/
+select[disabled] {color: black;}
+checkbox[disabled] {color: black;}
+
+/*欄位輸入*/
+.ab-inp {
+    font-size:13px;
+    font-family:Lucida Grande,Lucida Sans,Arial;
+    vertical-align:middle;
+    height:14px;
+    margin:0px;
+    padding:2px;
+    border: 1px solid #858898;
+    background:#fff url(../images/text-bg.gif) repeat-x 0 0;
+}
+/*唯讀欄位輸入*/
+.ab-inp-readonly {
+    font-size:13px;
+    font-family:Lucida Grande,Lucida Sans,Arial;
+    vertical-align:middle;
+    height:14px;
+    margin:0px;
+    padding:2px;
+    border: 1px solid #858898;
+    background:#e8e8e8;
+}
+
+/*下拉選項*/
+.ab-sel {
+    font-size:13px;
+    font-family:Lucida Grande,Lucida Sans,Arial;
+    vertical-align:middle;
+    height:22px;
+    margin:0px;
+    padding:0px;
+    border:1px solid #858898;
+    background:#fff url(../images/text-bg.gif) repeat-x 0 0;
+}
+ /*唯讀下拉選項*/
+.ab-sel-readonly {
+    font-size:13px;
+    font-family:Lucida Grande,Lucida Sans,Arial;
+    height:22px;
+    margin:0px;
+    padding:0px;
+    border:1px solid #858898;
+    background-color:#e8e8e8;
+}
+
+
+/*按鈕*/
+.ab-btn {
+    /* Structure */
+    display: inline-block;
+    *display: inline; /*IE 6/7*/
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Firefox: Get rid of the inner focus border */
+.ab-btn::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+.ab-btn {
+    font-size: 100%;
+    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
+    font-family: Lucida Grande,Lucida Sans,Arial;
+    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+    height: 1.6em;
+    padding: 0.0em;
+    color: #444; /* rgba not supported (IE 8) */
+    color: rgba(0, 0, 0, 0.80); /* rgba supported */
+    *color: #444; /* IE 6 & 7 */
+    border: 1px solid #999;  /*IE 6/7/8*/
+    border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+    /*background-color: #E6E6E6;*/
+    background-color: #E0F0FB;
+    text-decoration: none;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+.ab-btn-hover,
+.ab-btn:hover,
+.ab-btn:focus {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: -moz-linear-gradient(top, rgba(0,0,0, 0.05) 0%, rgba(0,0,0, 0.10));
+    background-image: -o-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+.ab-btn:focus {
+    outline: 0;
+}
+.ab-btn-active,
+.ab-btn:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+.ab-btn[disabled],
+.ab-btn-disabled,
+.ab-btn-disabled:hover,
+.ab-btn-disabled:focus,
+.ab-btn-disabled:active {
+    border: none;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    filter: alpha(opacity=40);
+    -khtml-opacity: 0.40;
+    -moz-opacity: 0.40;
+    opacity: 0.40;
+    cursor: not-allowed;
+    /*box-shadow: none;*/
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+}
+.ab-btn-hidden {
+    display: none;
+}
+/*小按鈕*/
+.ab-btn-small {
+    font-size: 70%;
+}
+
+
+/*----------------*/
+/*顯示查詢等待*/
+.request-overlay {
+    z-index: 9999;
+    position: fixed; /*Important to cover the screen in case of scolling content*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    background: rgba(200,200,200,0.5) url('../images/ajax-loader.gif') no-repeat center; /*.gif file or just div with message etc. however you like*/
+}
